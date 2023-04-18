@@ -1,0 +1,236 @@
+{
+  "data": [
+    {
+      "idGroup": "mdcjnd",
+      "idCompany": 1,
+      "id": "njidbhsdb",
+      "name": "Tienda 1",
+      "base": [
+        {
+          "name": "Current Conmsuption",
+          "percent": 65,
+          "color": "#01684B"
+        },
+        {
+          "name": "Base Conmsuption",
+          "percent": 12,
+          "color": "#F5B045"
+        },
+        {
+          "name": "Six-month Conmsuption",
+          "percent": 23,
+          "color": "#26E7A6"
+        },
+        {
+          "name": "Potential",
+          "percent": 98,
+          "color": "#38D5CE"
+        }
+      ],
+      "accounts": 0
+    },
+    {
+      "idGroup": "mdcjnd",
+      "idCompany": 1,
+      "id": "cixuyhh",
+      "name": "Tienda 2",
+      "base": [
+        {
+          "name": "Current Conmsuption",
+          "percent": 65,
+          "color": "#01684B"
+        },
+        {
+          "name": "Base Conmsuption",
+          "percent": 12,
+          "color": "#F5B045"
+        },
+        {
+          "name": "Six-month Conmsuption",
+          "percent": 23,
+          "color": "#26E7A6"
+        },
+        {
+          "name": "Potential",
+          "percent": 98,
+          "color": "#38D5CE"
+        }
+      ],
+      "accounts": 0
+    },
+    {
+      "idGroup": "jisdfhjdg",
+      "idCompany": 1,
+      "id": "pwefjkdn",
+      "name": "Tienda 3",
+      "base": [
+        {
+          "name": "Current Conmsuption",
+          "percent": 65,
+          "color": "#01684B"
+        },
+        {
+          "name": "Base Conmsuption",
+          "percent": 12,
+          "color": "#F5B045"
+        },
+        {
+          "name": "Six-month Conmsuption",
+          "percent": 23,
+          "color": "#26E7A6"
+        },
+        {
+          "name": "Potential",
+          "percent": 98,
+          "color": "#38D5CE"
+        }
+      ],
+      "accounts": 1
+    },
+    {
+      "idGroup": "zdfaser",
+      "idCompany": 1,
+      "id": "ywuhjsmn",
+      "name": "Tienda 4",
+      "base": [
+        {
+          "name": "Current Conmsuption",
+          "percent": 65,
+          "color": "#01684B"
+        },
+        {
+          "name": "Base Conmsuption",
+          "percent": 12,
+          "color": "#F5B045"
+        },
+        {
+          "name": "Six-month Conmsuption",
+          "percent": 23,
+          "color": "#26E7A6"
+        },
+        {
+          "name": "Potential",
+          "percent": 98,
+          "color": "#38D5CE"
+        }
+      ],
+      "accounts": 0
+    },
+    {
+      "idGroup": "zdfaser",
+      "idCompany": 1,
+      "id": "pweifhn",
+      "name": "Tienda 5",
+      "base": [
+        {
+          "name": "Current Conmsuption",
+          "percent": 65,
+          "color": "#01684B"
+        },
+        {
+          "name": "Base Conmsuption",
+          "percent": 12,
+          "color": "#F5B045"
+        },
+        {
+          "name": "Six-month Conmsuption",
+          "percent": 23,
+          "color": "#26E7A6"
+        },
+        {
+          "name": "Potential",
+          "percent": 98,
+          "color": "#38D5CE"
+        }
+      ],
+      "accounts": 19
+    },
+    {
+      "idGroup": "sdklfdksj",
+      "idCompany": 2,
+      "id": "ysdhjncm",
+      "name": "Tienda 6",
+      "base": [
+        {
+          "name": "Current Conmsuption",
+          "percent": 65,
+          "color": "#01684B"
+        },
+        {
+          "name": "Base Conmsuption",
+          "percent": 12,
+          "color": "#F5B045"
+        },
+        {
+          "name": "Six-month Conmsuption",
+          "percent": 23,
+          "color": "#26E7A6"
+        },
+        {
+          "name": "Potential",
+          "percent": 98,
+          "color": "#38D5CE"
+        }
+      ],
+      "accounts": 2
+    },
+    {
+      "idGroup": "sdklfdksj",
+      "idCompany": 2,
+      "id": "psjsnshnd",
+      "name": "Tienda 7",
+      "base": [
+        {
+          "name": "Current Conmsuption",
+          "percent": 65,
+          "color": "#01684B"
+        },
+        {
+          "name": "Base Conmsuption",
+          "percent": 12,
+          "color": "#F5B045"
+        },
+        {
+          "name": "Six-month Conmsuption",
+          "percent": 23,
+          "color": "#26E7A6"
+        },
+        {
+          "name": "Potential",
+          "percent": 98,
+          "color": "#38D5CE"
+        }
+      ],
+      "accounts": 0
+    },
+    {
+      "idGroup": "xdyhful",
+      "idCompany": 2,
+      "id": "poeujsdkf",
+      "name": "Tienda 8",
+      "base": [
+        {
+          "name": "Current Conmsuption",
+          "percent": 65,
+          "color": "#01684B"
+        },
+        {
+          "name": "Base Conmsuption",
+          "percent": 12,
+          "color": "#F5B045"
+        },
+        {
+          "name": "Six-month Conmsuption",
+          "percent": 23,
+          "color": "#26E7A6"
+        },
+        {
+          "name": "Potential",
+          "percent": 98,
+          "color": "#38D5CE"
+        }
+      ],
+      "accounts": 1
+    }
+  ]
+}

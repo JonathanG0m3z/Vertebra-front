@@ -1,0 +1,120 @@
+{
+  "data": [
+    {
+      "idGroup": "jisdfhjdg",
+      "idCompany": 1,
+      "idShop": "pwefjkdn",
+      "id": "jdhd9--289",      
+      "name": "Cuenta 1",
+      "base": [
+        {
+          "name": "Current Conmsuption",
+          "percent": 65,
+          "color": "#01684B"
+        },
+        {
+          "name": "Base Conmsuption",
+          "percent": 12,
+          "color": "#F5B045"
+        },
+        {
+          "name": "Six-month Conmsuption",
+          "percent": 23,
+          "color": "#26E7A6"
+        },
+        {
+          "name": "Potential",
+          "percent": 98,
+          "color": "#38D5CE"
+        }
+      ]
+    },
+    {
+      "idGroup": "sdklfdksj",
+      "idCompany": 2,
+      "idShop": "ysdhjncm",
+      "id": "jsjdjsd--289",
+      "name": "Cuenta 2",
+      "base": [
+        {
+          "name": "Current Conmsuption",
+          "percent": 65,
+          "color": "#01684B"
+        },
+        {
+          "name": "Base Conmsuption",
+          "percent": 12,
+          "color": "#F5B045"
+        },
+        {
+          "name": "Six-month Conmsuption",
+          "percent": 23,
+          "color": "#26E7A6"
+        },
+        {
+          "name": "Potential",
+          "percent": 98,
+          "color": "#38D5CE"
+        }
+      ]
+    },
+    {
+      "idGroup": "sdklfdksj",
+      "idCompany": 2,
+      "idShop": "ysdhjncm",
+      "id": "ouiwdhuhd--289",
+      "name": "Cuenta 3",
+      "base": [
+        {
+          "name": "Current Conmsuption",
+          "percent": 65,
+          "color": "#01684B"
+        },
+        {
+          "name": "Base Conmsuption",
+          "percent": 12,
+          "color": "#F5B045"
+        },
+        {
+          "name": "Six-month Conmsuption",
+          "percent": 23,
+          "color": "#26E7A6"
+        },
+        {
+          "name": "Potential",
+          "percent": 98,
+          "color": "#38D5CE"
+        }
+      ]
+    },
+    {
+      "idGroup": "xdyhful",
+      "idCompany": 2,
+      "idShop": "poeujsdkf",
+      "id": "jdhd9dhd99782",
+      "name": "Cuenta 4",
+      "base": [
+        {
+          "name": "Current Conmsuption",
+          "percent": 65,
+          "color": "#01684B"
+        },
+        {
+          "name": "Base Conmsuption",
+          "percent": 12,
+          "color": "#F5B045"
+        },
+        {
+          "name": "Six-month Conmsuption",
+          "percent": 23,
+          "color": "#26E7A6"
+        },
+        {
+          "name": "Potential",
+          "percent": 98,
+          "color": "#38D5CE"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "data": [
+    {
+      "id": "mdcjnd",
+      "idCompany": 1,
+      "name": "Grupo 1",
+      "base": [
+        {
+          "name": "Current Conmsuption",
+          "percent": 65,
+          "color": "#01684B"
+        },
+        {
+          "name": "Base Conmsuption",
+          "percent": 12,
+          "color": "#F5B045"
+        },
+        {
+          "name": "Six-month Conmsuption",
+          "percent": 23,
+          "color": "#26E7A6"
+        },
+        {
+          "name": "Potential",
+          "percent": 98,
+          "color": "#38D5CE"
+        }
+      ],
+      "shops": 2,
+      "accounts": 0
+    },
+    {
+      "id": "jisdfhjdg",
+      "idCompany": 1,
+      "name": "Grupo 2",
+      "base": [
+        {
+          "name": "Current Conmsuption",
+          "percent": 65,
+          "color": "#01684B"
+        },
+        {
+          "name": "Base Conmsuption",
+          "percent": 12,
+          "color": "#F5B045"
+        },
+        {
+          "name": "Six-month Conmsuption",
+          "percent": 23,
+          "color": "#26E7A6"
+        },
+        {
+          "name": "Potential",
+          "percent": 98,
+          "color": "#38D5CE"
+        }
+      ],
+      "shops": 1,
+      "accounts": 1
+    },
+    {
+      "id": "zdfaser",
+      "idCompany": 1,
+      "name": "Grupo 3",
+      "base": [
+        {
+          "name": "Current Conmsuption",
+          "percent": 65,
+          "color": "#01684B"
+        },
+        {
+          "name": "Base Conmsuption",
+          "percent": 12,
+          "color": "#F5B045"
+        },
+        {
+          "name": "Six-month Conmsuption",
+          "percent": 23,
+          "color": "#26E7A6"
+        },
+        {
+          "name": "Potential",
+          "percent": 98,
+          "color": "#38D5CE"
+        }
+      ],
+      "shops": 2,
+      "accounts": 0
+    },
+    {
+      "id": "sdklfdksj",
+      "idCompany": 2,
+      "name": "Grupo 4",
+      "base": [
+        {
+          "name": "Current Conmsuption",
+          "percent": 65,
+          "color": "#01684B"
+        },
+        {
+          "name": "Base Conmsuption",
+          "percent": 12,
+          "color": "#F5B045"
+        },
+        {
+          "name": "Six-month Conmsuption",
+          "percent": 23,
+          "color": "#26E7A6"
+        },
+        {
+          "name": "Potential",
+          "percent": 98,
+          "color": "#38D5CE"
+        }
+      ],
+      "shops": 2,
+      "accounts": 1
+    },
+    {
+      "id": "xdyhful",
+      "idCompany": 2,
+      "name": "Grupo 5",
+      "base": [
+        {
+          "name": "Current Conmsuption",
+          "percent": 65,
+          "color": "#01684B"
+        },
+        {
+          "name": "Base Conmsuption",
+          "percent": 12,
+          "color": "#F5B045"
+        },
+        {
+          "name": "Six-month Conmsuption",
+          "percent": 23,
+          "color": "#26E7A6"
+        },
+        {
+          "name": "Potential",
+          "percent": 98,
+          "color": "#38D5CE"
+        }
+      ],
+      "shops": 10,
+      "accounts": 19
+    },
+    {
+      "id": "efhjndd",
+      "idCompany": 3,
+      "name": "Grupo 6",
+      "base": [
+        {
+          "name": "Current Conmsuption",
+          "percent": 65,
+          "color": "#01684B"
+        },
+        {
+          "name": "Base Conmsuption",
+          "percent": 12,
+          "color": "#F5B045"
+        },
+        {
+          "name": "Six-month Conmsuption",
+          "percent": 23,
+          "color": "#26E7A6"
+        },
+        {
+          "name": "Potential",
+          "percent": 98,
+          "color": "#38D5CE"
+        }
+      ],
+      "shops": 0,
+      "accounts": 19
+    }
+  ]
+}

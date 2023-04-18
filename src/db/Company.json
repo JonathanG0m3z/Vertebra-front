@@ -1,0 +1,178 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "groups": 3,
+      "shops": 5,
+      "accounts": 1,
+      "name": "Empresa SAS",
+      "base": [
+        {
+          "name": "Current Conmsuption",
+          "percent": 65,
+          "color": "#01684B"
+        },
+        {
+          "name": "Base Conmsuption",
+          "percent": 12,
+          "color": "#F5B045"
+        },
+        {
+          "name": "Six-month Conmsuption",
+          "percent": 23,
+          "color": "#26E7A6"
+        },
+        {
+          "name": "Potential",
+          "percent": 98,
+          "color": "#38D5CE"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "groups": 2,
+      "shops": 3,
+      "accounts": 3,
+      "name": "Cliente SAS",
+      "base": [
+        {
+          "name": "Current Conmsuption",
+          "percent": 65,
+          "color": "#01684B"
+        },
+        {
+          "name": "Base Conmsuption",
+          "percent": 12,
+          "color": "#F5B045"
+        },
+        {
+          "name": "Six-month Conmsuption",
+          "percent": 23,
+          "color": "#26E7A6"
+        },
+        {
+          "name": "Potential",
+          "percent": 98,
+          "color": "#38D5CE"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "groups": 1,
+      "shops": 0,
+      "accounts": 0,
+      "name": "Banco SAS",
+      "base": [
+        {
+          "name": "Current Conmsuption",
+          "percent": 65,
+          "color": "#01684B"
+        },
+        {
+          "name": "Base Conmsuption",
+          "percent": 12,
+          "color": "#F5B045"
+        },
+        {
+          "name": "Six-month Conmsuption",
+          "percent": 23,
+          "color": "#26E7A6"
+        },
+        {
+          "name": "Potential",
+          "percent": 98,
+          "color": "#38D5CE"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "groups": 0,
+      "shops": 0,
+      "accounts": 0,
+      "name": "Otra Empresa SAS",
+      "base": [
+        {
+          "name": "Current Conmsuption",
+          "percent": 65,
+          "color": "#01684B"
+        },
+        {
+          "name": "Base Conmsuption",
+          "percent": 12,
+          "color": "#F5B045"
+        },
+        {
+          "name": "Six-month Conmsuption",
+          "percent": 23,
+          "color": "#26E7A6"
+        },
+        {
+          "name": "Potential",
+          "percent": 98,
+          "color": "#38D5CE"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "groups": 0,
+      "shops": 0,
+      "accounts": 0,
+      "name": "Vertebra SAS",
+      "base": [
+        {
+          "name": "Current Conmsuption",
+          "percent": 65,
+          "color": "#01684B"
+        },
+        {
+          "name": "Base Conmsuption",
+          "percent": 12,
+          "color": "#F5B045"
+        },
+        {
+          "name": "Six-month Conmsuption",
+          "percent": 23,
+          "color": "#26E7A6"
+        },
+        {
+          "name": "Potential",
+          "percent": 98,
+          "color": "#38D5CE"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "groups": 0,
+      "shops": 0,
+      "accounts": 0,
+      "name": "Otro Cliente SAS",
+      "base": [
+        {
+          "name": "Current Conmsuption",
+          "percent": 65,
+          "color": "#01684B"
+        },
+        {
+          "name": "Base Conmsuption",
+          "percent": 12,
+          "color": "#F5B045"
+        },
+        {
+          "name": "Six-month Conmsuption",
+          "percent": 23,
+          "color": "#26E7A6"
+        },
+        {
+          "name": "Potential",
+          "percent": 98,
+          "color": "#38D5CE"
+        }
+      ]
+    }
+  ]
+}
