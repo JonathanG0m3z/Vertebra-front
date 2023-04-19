@@ -17,11 +17,11 @@ interface Shop {
   base: Base[];
 }
 
-const idCompany: number = 1;
-
-const shopData: Shop[]  = data.data.filter((shop)=>shop.idCompany===idCompany);
-
-const EcoTabShop: React.FC = () => {
+const EcoTabShop: React.FC = ({idCompany, idGroup}) => {
+  let shopData: Shop[] =[];
+  if(idCompany!==undefined) shopData= data.data.filter((shop)=>shop.idCompany===idCompany);
+  else if(idGroup!==undefined) shopData= data.data.filter((shop)=>shop.idGroup===idGroup);
+    
   return (
     <>
       <div>

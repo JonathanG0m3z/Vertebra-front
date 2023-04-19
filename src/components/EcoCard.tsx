@@ -24,21 +24,21 @@ interface ecoCard {
   };
 }
 
-const tabSelector = {
-  Grupos: <EcoTabGroup />,
-  Tiendas: <EcoTabShop />,
-  Cuentas: <EcoTabAccount />,
-};
-
 const EcoCard = ({ record }: ecoCard) => {
-  const { tabs, dispatch, setActiveTab } = useContext(EcoTabContext);
+  const { dispatch } = useContext(EcoTabContext);
   const [company, setCompany] = useState(null);
+
+  const tabSelector = {
+    Grupos: <EcoTabGroup idCompany={company?.id} />,
+    Tiendas: <EcoTabShop idCompany={company?.id} />,
+    Cuentas: <EcoTabAccount idCompany={company?.id} />,
+  };
 
   const handleClicOption = (event)=>{   
     dispatch({ type: EcoTabReducerActionType.ADD_TAB, payload: {
       title: `${company.name} - ${event.target.id}`,
       content: tabSelector[event.target.id]
-    } });
+    }});
   };
   
   const items: MenuProps['items'] = [

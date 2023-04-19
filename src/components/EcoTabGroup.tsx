@@ -17,11 +17,8 @@ interface Group {
     base: Base[];
 }
 
-const idCompany: number = 1;
-
-const groupData: Group[]  = data.data.filter((group)=>group.idCompany===idCompany);
-
-const EcoTabGroup: React.FC = () => {
+const EcoTabGroup: React.FC = ({idCompany}) => {
+  const groupData: Group[]  = data.data.filter((group)=>group.idCompany===idCompany);
   return (
     <>
       <div>

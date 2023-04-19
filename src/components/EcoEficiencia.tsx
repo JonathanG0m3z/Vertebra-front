@@ -3,9 +3,6 @@ import { Tabs } from "antd";
 import EcoTabCompany from "./EcoTabCompany";
 import { EcoTabContext } from "./context/EcoTabContext";
 import { EcoTabReducer, EcoTabReducerActionType } from "./context/EcoTabReducer";
-import EcoTabGroup from "./EcoTabGroup";
-import EcoTabShop from "./EcoTabShop";
-import EcoTabAccount from "./EcoTabAccount";
 
 const { TabPane } = Tabs;
 

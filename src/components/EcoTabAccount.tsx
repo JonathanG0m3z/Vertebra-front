@@ -17,11 +17,10 @@ interface Account {
   base: Base[];
 }
 
-const idCompany: number = 1;
-
-const accountData: Account[]  = data.data.filter((account)=>account.idCompany===idCompany);
-
-const EcoTabAccount: React.FC = () => {
+const EcoTabAccount: React.FC = ({idCompany, idGroup}) => {
+  let accountData: Account[] = [];
+  if(idCompany!==undefined) accountData= data.data.filter((account)=>account.idCompany===idCompany);
+  else if(idGroup!==undefined) accountData= data.data.filter((account)=>account.idGroup===idGroup);
   return (
     <>
       <div>

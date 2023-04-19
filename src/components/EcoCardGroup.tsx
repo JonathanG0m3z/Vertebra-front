@@ -9,23 +9,12 @@ import {
 
 import { Dropdown } from 'antd';
 import type { MenuProps } from 'antd';
-const items: MenuProps['items'] = [
-  {
-    label: <a href="https://www.antgroup.com">1st menu item</a>,
-    key: '0',
-  },
-  {
-    label: <a href="https://www.aliyun.com">2nd menu item</a>,
-    key: '1',
-  },
-  {
-    type: 'divider',
-  },
-  {
-    label: '3rd menu item',
-    key: '3',
-  },
-];
+import { useContext, useState } from "react";
+import EcoTabGroup from "./EcoTabGroup";
+import EcoTabShop from "./EcoTabShop";
+import EcoTabAccount from "./EcoTabAccount";
+import { EcoTabContext } from "./context/EcoTabContext";
+import { EcoTabReducerActionType } from "./context/EcoTabReducer";
 
 interface ecoCard {
   record: {
@@ -52,12 +41,39 @@ const icons = {
 };
 
 const EcoCardGroup = ({ record }: ecoCard) => {
+  const { dispatch } = useContext(EcoTabContext);
+  const [group, setGroup] = useState(null);
+
+  const tabSelector = {
+    Tiendas: <EcoTabShop idGroup={group?.id} />,
+    Cuentas: <EcoTabAccount idGroup={group?.id} />,
+  };
+
+  const handleClicOption = (event)=>{   
+    console.log("hola");
+    
+    dispatch({ type: EcoTabReducerActionType.ADD_TAB, payload: {
+      title: `${group.name} - ${event.target.id}`,
+      content: tabSelector[event.target.id]
+    }});
+  };
+  
+  const items: MenuProps['items'] = [
+    {
+      label: <a onClick={handleClicOption} id='Tiendas'>Tiendas</a>,
+      key: '1',
+    },
+    {
+      label: <a onClick={handleClicOption} id='Cuentas'>Cuentas</a>,
+      key: '2',
+    },
+  ];
   return (
     <>
     <Card style={{ width: 250 }}>
     <Row>
       <Dropdown menu={{ items }} trigger={['click']}>
-          <Col span={24} style={{ marginBottom: "9px" }}>
+          <Col span={24} style={{ marginBottom: "9px" }} onClick={()=>setGroup(record)}>
           <Typography.Text style={{ color: "#5C5C61", fontWeight: "bold" }}>
             {record.name.toUpperCase()}
           </Typography.Text>
