@@ -3,6 +3,7 @@ import { Tabs } from "antd";
 import EcoTabCompany from "./EcoTabCompany";
 import { EcoTabContext } from "./context/EcoTabContext";
 import { EcoTabReducer, EcoTabReducerActionType } from "./context/EcoTabReducer";
+import EcoTabGroup from "./EcoTabGroup";
 
 const { TabPane } = Tabs;
 
@@ -44,6 +45,9 @@ const EcoEficiencia = () => {
         >
           <TabPane tab="COMPANIA" key={"1"} closeIcon={<></>}>
             <EcoTabCompany />
+          </TabPane>
+          <TabPane tab="Grupos" key={"2"} closeIcon={<>x</>}>
+            <EcoTabGroup />
           </TabPane>
 
           {tabs.map((pane: any) => (

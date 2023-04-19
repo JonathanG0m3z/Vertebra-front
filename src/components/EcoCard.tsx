@@ -1,9 +1,27 @@
-import { Row, Col, Typography, Progress, Divider, Tooltip } from "antd";
+import { Row, Col, Typography, Progress, Divider, Tooltip, Card, Dropdown } from "antd";
 import {
   BarChartOutlined,
   BulbOutlined,
   SlidersOutlined,
 } from "@ant-design/icons";
+import type { MenuProps } from 'antd';
+const items: MenuProps['items'] = [
+  {
+    label: <a href="https://www.antgroup.com">1st menu item</a>,
+    key: '0',
+  },
+  {
+    label: <a href="https://www.aliyun.com">2nd menu item</a>,
+    key: '1',
+  },
+  {
+    type: 'divider',
+  },
+  {
+    label: '3rd menu item',
+    key: '3',
+  },
+];
 
 interface ecoCard {
   record: {
@@ -19,7 +37,9 @@ interface ecoCard {
 
 const EcoCard = ({ record }: ecoCard) => {
   return (
-    <Row>
+    <>
+    <Card style={{ width: 250 }}>
+      <Row>
       {record?.account !== undefined ? (
         <Col span={24} style={{ marginBottom: "3px" }}>
           <Typography.Text
@@ -29,12 +49,14 @@ const EcoCard = ({ record }: ecoCard) => {
           </Typography.Text>
         </Col>
       ) : null}
-
-      <Col span={24} style={{ marginBottom: "9px" }}>
-        <Typography.Text style={{ color: "#5C5C61", fontWeight: "bold" }}>
-          {record.name.toUpperCase()}
-        </Typography.Text>
-      </Col>
+      <Dropdown menu={{ items }} trigger={['click']}>
+          <Col span={24} style={{ marginBottom: "9px" }}>
+          <Typography.Text style={{ color: "#5C5C61", fontWeight: "bold" }}>
+            {record.name.toUpperCase()}
+          </Typography.Text>
+        </Col>
+      </Dropdown>
+      
 
       {record?.base.map((m: any) => (
         <>
@@ -185,6 +207,9 @@ const EcoCard = ({ record }: ecoCard) => {
         </Tooltip>
       ) : null}
     </Row>
+    </Card>
+    <Divider type="vertical" />
+    </>
   );
 };
 export default EcoCard;
