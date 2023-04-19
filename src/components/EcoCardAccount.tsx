@@ -31,7 +31,7 @@ interface ecoCard {
     id: String;
     name: String;
     idCompany: number;
-    accounts: number;
+    idShop: String;
     base: any;
   };
 };
@@ -49,7 +49,7 @@ const icons = {
   3: <ApiFilled />
 };
 
-const EcoCardShop = ({ record }: ecoCard) => {
+const EcoCardAccount = ({ record }: ecoCard) => {
   return (
     <>
     <Card style={{ width: 250 }}>
@@ -86,31 +86,10 @@ const EcoCardShop = ({ record }: ecoCard) => {
         </Tooltip>
         </>)
       ) : null}
-      <Tooltip title="accounts" color="#009432">
-        <Col
-            span="24"
-            style={{ display: "grid", justifyContent: "center" }}
-          >
-        <Typography.Text>
-              <span className="material-icons" style={{ color: "#009432" }}>
-              receipt_long
-              </span>
-            </Typography.Text>
-
-            <Typography.Text
-              style={{
-                fontSize: "0.7rem",
-                textAlign: "center",
-              }}
-            >
-              {record.accounts}
-            </Typography.Text>
-      </Col>
-      </Tooltip>
     </Row>
     </Card>
     <Divider type="vertical" />
     </>
   );
 };
-export default EcoCardShop;
+export default EcoCardAccount;
