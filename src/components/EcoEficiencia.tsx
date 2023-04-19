@@ -12,13 +12,13 @@ const { TabPane } = Tabs;
 const EcoEficiencia = () => {
   const [activeTab, setActiveTab] = useState("1");
 
-
   const removeTabsEco = (targetKey: any) => {
     const indexTabToRemove = tabs.findIndex(
       (pane: any) => pane.key === targetKey
     );
+    
     if (indexTabToRemove !== -1) {
-      dispatch({ type: EcoTabReducerActionType.REMOVE_TABS, payload: tabs[indexTabToRemove] });
+      dispatch({ type: EcoTabReducerActionType.REMOVE_TABS, payload: indexTabToRemove });
       if (indexTabToRemove > 0) {
         setActiveTab(tabs[indexTabToRemove - 1].key);
       }
@@ -31,7 +31,6 @@ const EcoEficiencia = () => {
   const onChange = (key: any) => {
     setActiveTab(key);
   };
-
   const [tabs, dispatch] = useReducer(EcoTabReducer, []);
 
   return (
@@ -48,16 +47,6 @@ const EcoEficiencia = () => {
           <TabPane tab="COMPANIA" key={"1"} closeIcon={<></>}>
             <EcoTabCompany />
           </TabPane>
-          <TabPane tab="Grupos" key={"2"} closeIcon={<>x</>}>
-            <EcoTabGroup />
-          </TabPane>
-          <TabPane tab="Tiendas" key={"3"} closeIcon={<>x</>}>
-            <EcoTabShop />
-          </TabPane>
-          <TabPane tab="Cuentas" key={"4"} closeIcon={<>x</>}>
-            <EcoTabAccount />
-          </TabPane>
-
           {tabs.map((pane: any) => (
             <TabPane tab={pane.title} key={pane.key}>
               {pane.content}

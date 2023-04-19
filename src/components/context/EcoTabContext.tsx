@@ -14,7 +14,7 @@ const EcoTabContextProvider: React.FC = ({ children }: PropsWithChildren) => {
   const [currentTab, setCurrentTab] = useState<string>("");
 
   return (
-    <EcoTabContext.Provider value={{ currentTab, setCurrentTab }}>
+    <EcoTabContext.Provider>
       {children}
     </EcoTabContext.Provider>
   );

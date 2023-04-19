@@ -5,23 +5,12 @@ import {
   SlidersOutlined,
 } from "@ant-design/icons";
 import type { MenuProps } from 'antd';
-const items: MenuProps['items'] = [
-  {
-    label: <a href="https://www.antgroup.com">1st menu item</a>,
-    key: '0',
-  },
-  {
-    label: <a href="https://www.aliyun.com">2nd menu item</a>,
-    key: '1',
-  },
-  {
-    type: 'divider',
-  },
-  {
-    label: '3rd menu item',
-    key: '3',
-  },
-];
+import { useContext, useState } from "react";
+import { EcoTabContext } from "./context/EcoTabContext";
+import { EcoTabReducerActionType } from "./context/EcoTabReducer";
+import EcoTabGroup from "./EcoTabGroup";
+import EcoTabShop from "./EcoTabShop";
+import EcoTabAccount from "./EcoTabAccount";
 
 interface ecoCard {
   record: {
@@ -35,7 +24,37 @@ interface ecoCard {
   };
 }
 
+const tabSelector = {
+  Grupos: <EcoTabGroup />,
+  Tiendas: <EcoTabShop />,
+  Cuentas: <EcoTabAccount />,
+};
+
 const EcoCard = ({ record }: ecoCard) => {
+  const { tabs, dispatch, setActiveTab } = useContext(EcoTabContext);
+  const [company, setCompany] = useState(null);
+
+  const handleClicOption = (event)=>{   
+    dispatch({ type: EcoTabReducerActionType.ADD_TAB, payload: {
+      title: `${company.name} - ${event.target.id}`,
+      content: tabSelector[event.target.id]
+    } });
+  };
+  
+  const items: MenuProps['items'] = [
+    {
+      label: <a onClick={handleClicOption} id='Grupos'>Grupos</a>,
+      key: '0',
+    },
+    {
+      label: <a onClick={handleClicOption} id='Tiendas'>Tiendas</a>,
+      key: '1',
+    },
+    {
+      label: <a onClick={handleClicOption} id='Cuentas'>Cuentas</a>,
+      key: '2',
+    },
+  ];
   return (
     <>
     <Card style={{ width: 250 }}>
@@ -49,8 +68,8 @@ const EcoCard = ({ record }: ecoCard) => {
           </Typography.Text>
         </Col>
       ) : null}
-      <Dropdown menu={{ items }} trigger={['click']}>
-          <Col span={24} style={{ marginBottom: "9px" }}>
+      <Dropdown menu={{ items, openKeys: [record.name.toUpperCase()]  }} trigger={['click']} >
+          <Col span={24} style={{ marginBottom: "9px" }} onClick={()=>setCompany(record)} >
           <Typography.Text style={{ color: "#5C5C61", fontWeight: "bold" }}>
             {record.name.toUpperCase()}
           </Typography.Text>
