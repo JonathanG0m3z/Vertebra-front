@@ -4,6 +4,7 @@ import EcoTabCompany from "./EcoTabCompany";
 import { EcoTabContext } from "./context/EcoTabContext";
 import { EcoTabReducer, EcoTabReducerActionType } from "./context/EcoTabReducer";
 import EcoTabGroup from "./EcoTabGroup";
+import EcoTabShop from "./EcoTabShop";
 
 const { TabPane } = Tabs;
 
@@ -48,6 +49,9 @@ const EcoEficiencia = () => {
           </TabPane>
           <TabPane tab="Grupos" key={"2"} closeIcon={<>x</>}>
             <EcoTabGroup />
+          </TabPane>
+          <TabPane tab="Tiendas" key={"3"} closeIcon={<>x</>}>
+            <EcoTabShop />
           </TabPane>
 
           {tabs.map((pane: any) => (
