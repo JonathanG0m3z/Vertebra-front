@@ -49,9 +49,7 @@ const EcoCardGroup = ({ record }: ecoCard) => {
     Cuentas: <EcoTabAccount idGroup={group?.id} />,
   };
 
-  const handleClicOption = (event)=>{   
-    console.log("hola");
-    
+  const handleClicOption = (event)=>{
     dispatch({ type: EcoTabReducerActionType.ADD_TAB, payload: {
       title: `${group.name} - ${event.target.id}`,
       content: tabSelector[event.target.id]

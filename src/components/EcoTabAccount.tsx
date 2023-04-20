@@ -1,6 +1,7 @@
 import React from 'react';
 import data from '../db/Account.json';
 import EcoCardAccount from './EcoCardAccount';
+import NotFound from './NotFound';
 
 interface Base {
   name: string;
@@ -17,12 +18,21 @@ interface Account {
   base: Base[];
 }
 
-const EcoTabAccount: React.FC = ({idCompany, idGroup}) => {
+const EcoTabAccount: React.FC = ({idCompany, idGroup, idShop}) => {
   let accountData: Account[] = [];
-  if(idCompany!==undefined) accountData= data.data.filter((account)=>account.idCompany===idCompany);
-  else if(idGroup!==undefined) accountData= data.data.filter((account)=>account.idGroup===idGroup);
+  let message = "";
+  if(idCompany!==undefined) {accountData= data.data.filter((account)=>account.idCompany===idCompany);
+    message= "esta compañía";
+  }
+  else if(idGroup!==undefined) {accountData= data.data.filter((account)=>account.idGroup===idGroup);
+    message= "este grupo";
+  }
+  else if(idShop!==undefined) {accountData= data.data.filter((account)=>account.idShop===idShop);
+    message= "esta tienda";
+  }
   return (
     <>
+    {!accountData.length?<NotFound mensaje={`No hay cuentas en ${message}`} />:null}
       <div>
         {accountData.map((account, index) => {
           return (

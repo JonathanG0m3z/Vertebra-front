@@ -8,23 +8,10 @@ import {
 
 import { Dropdown } from 'antd';
 import type { MenuProps } from 'antd';
-const items: MenuProps['items'] = [
-  {
-    label: <a href="https://www.antgroup.com">1st menu item</a>,
-    key: '0',
-  },
-  {
-    label: <a href="https://www.aliyun.com">2nd menu item</a>,
-    key: '1',
-  },
-  {
-    type: 'divider',
-  },
-  {
-    label: '3rd menu item',
-    key: '3',
-  },
-];
+import { useContext, useState } from "react";
+import { EcoTabContext } from "./context/EcoTabContext";
+import EcoTabAccount from "./EcoTabAccount";
+import { EcoTabReducerActionType } from "./context/EcoTabReducer";
 
 interface ecoCard {
   record: {
@@ -50,12 +37,32 @@ const icons = {
 };
 
 const EcoCardShop = ({ record }: ecoCard) => {
+  const { dispatch } = useContext(EcoTabContext);
+  const [shop, setShop] = useState(null);
+
+  const tabSelector = {
+    Cuentas: <EcoTabAccount idShop={shop?.id} />,
+  };
+
+  const handleClicOption = (event)=>{
+    dispatch({ type: EcoTabReducerActionType.ADD_TAB, payload: {
+      title: `${shop.name} - ${event.target.id}`,
+      content: tabSelector[event.target.id]
+    }});
+  };
+  
+  const items: MenuProps['items'] = [
+    {
+      label: <a onClick={handleClicOption} id='Cuentas'>Cuentas</a>,
+      key: '1',
+    },
+  ];
   return (
     <>
     <Card style={{ width: 250 }}>
     <Row>
       <Dropdown menu={{ items }} trigger={['click']}>
-          <Col span={24} style={{ marginBottom: "9px" }}>
+          <Col span={24} style={{ marginBottom: "9px" }} onClick={()=>setShop(record)}>
           <Typography.Text style={{ color: "#5C5C61", fontWeight: "bold" }}>
             {record.name.toUpperCase()}
           </Typography.Text>

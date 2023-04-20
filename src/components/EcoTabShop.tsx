@@ -1,6 +1,7 @@
 import React from 'react';
 import data from '../db/Shops.json';
 import EcoCardShop from './EcoCardShop';
+import NotFound from './NotFound';
 
 interface Base {
   name: string;
@@ -24,6 +25,7 @@ const EcoTabShop: React.FC = ({idCompany, idGroup}) => {
     
   return (
     <>
+    {!shopData.length?<NotFound mensaje={`No hay tiendas en ${idCompany!==undefined?'esta compañía':'este grupo'}`} />:null}
       <div>
         {shopData.map((shop, index) => {
           return (
