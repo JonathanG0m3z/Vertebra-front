@@ -36,7 +36,7 @@ const EcoCard = ({ record }: ecoCard) => {
 
   const handleClicOption = (event)=>{   
     dispatch({ type: EcoTabReducerActionType.ADD_TAB, payload: {
-      title: `${company.name} - ${event.target.id}`,
+      title: `${company?.name} - ${event.target.id}`,
       content: tabSelector[event.target.id]
     }});
   };
@@ -68,8 +68,8 @@ const EcoCard = ({ record }: ecoCard) => {
           </Typography.Text>
         </Col>
       ) : null}
-      <Dropdown menu={{ items, openKeys: [record.name.toUpperCase()]  }} trigger={['click']} >
-          <Col span={24} style={{ marginBottom: "9px" }} onClick={()=>setCompany(record)} >
+      <Dropdown menu={{ items, openKeys: [record.name.toUpperCase()]  }} trigger={['click', 'contextMenu']} >
+          <Col span={24} style={{ marginBottom: "9px" }} onClick={()=>setCompany(record)} onContextMenu={()=>setCompany(record)} >
           <Typography.Text style={{ color: "#5C5C61", fontWeight: "bold" }}>
             {record.name.toUpperCase()}
           </Typography.Text>

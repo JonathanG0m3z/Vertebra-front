@@ -10,7 +10,6 @@ import {
 import { Dropdown } from 'antd';
 import type { MenuProps } from 'antd';
 import { useContext, useState } from "react";
-import EcoTabGroup from "./EcoTabGroup";
 import EcoTabShop from "./EcoTabShop";
 import EcoTabAccount from "./EcoTabAccount";
 import { EcoTabContext } from "./context/EcoTabContext";
@@ -49,9 +48,9 @@ const EcoCardGroup = ({ record }: ecoCard) => {
     Cuentas: <EcoTabAccount idGroup={group?.id} />,
   };
 
-  const handleClicOption = (event)=>{
+  const handleClicOption = (event: any)=>{
     dispatch({ type: EcoTabReducerActionType.ADD_TAB, payload: {
-      title: `${group.name} - ${event.target.id}`,
+      title: `${group?.name} - ${event.target.id}`,
       content: tabSelector[event.target.id]
     }});
   };
@@ -70,8 +69,8 @@ const EcoCardGroup = ({ record }: ecoCard) => {
     <>
     <Card style={{ width: 250 }}>
     <Row>
-      <Dropdown menu={{ items }} trigger={['click']}>
-          <Col span={24} style={{ marginBottom: "9px" }} onClick={()=>setGroup(record)}>
+      <Dropdown menu={{ items }} trigger={['click', 'contextMenu']}>
+          <Col span={24} style={{ marginBottom: "9px" }} onClick={()=>setGroup(record)} onContextMenu={()=>setGroup(record)}>
           <Typography.Text style={{ color: "#5C5C61", fontWeight: "bold" }}>
             {record.name.toUpperCase()}
           </Typography.Text>

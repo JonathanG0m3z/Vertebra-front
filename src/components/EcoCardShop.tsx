@@ -61,8 +61,8 @@ const EcoCardShop = ({ record }: ecoCard) => {
     <>
     <Card style={{ width: 250 }}>
     <Row>
-      <Dropdown menu={{ items }} trigger={['click']}>
-          <Col span={24} style={{ marginBottom: "9px" }} onClick={()=>setShop(record)}>
+      <Dropdown menu={{ items }} trigger={['click', 'contextMenu']}>
+          <Col span={24} style={{ marginBottom: "9px" }} onClick={()=>setShop(record)} onContextMenu={()=>setShop(record)}>
           <Typography.Text style={{ color: "#5C5C61", fontWeight: "bold" }}>
             {record.name.toUpperCase()}
           </Typography.Text>

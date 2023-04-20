@@ -17,8 +17,13 @@ interface Account {
   idShop: String;
   base: Base[];
 }
+interface Props {
+  idCompany: number | undefined;
+  idGroup: String | undefined;
+  idShop: String | undefined;
+}
 
-const EcoTabAccount: React.FC = ({idCompany, idGroup, idShop}) => {
+const EcoTabAccount: React.FC = ({idCompany, idGroup, idShop}:Props) => {
   let accountData: Account[] = [];
   let message = "";
   if(idCompany!==undefined) {accountData= data.data.filter((account)=>account.idCompany===idCompany);
@@ -33,7 +38,7 @@ const EcoTabAccount: React.FC = ({idCompany, idGroup, idShop}) => {
   return (
     <>
     {!accountData.length?<NotFound mensaje={`No hay cuentas en ${message}`} />:null}
-      <div>
+      <div style={{overflowY: 'scroll', width: '270px', height: '90vh'}}>
         {accountData.map((account, index) => {
           return (
             <div key={index} style={{ maxWidth: "250px" }}>

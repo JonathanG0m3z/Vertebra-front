@@ -22,7 +22,7 @@ const companyData: { data: Company[] } = data;
 const EcoTabCompany: React.FC = () => {
   return (
     <>
-      <div>
+      <div style={{overflowY: 'scroll', width: '270px', height: '90vh'}}>
         {companyData.data.map((company, index) => {
           return (
             <div key={index}>

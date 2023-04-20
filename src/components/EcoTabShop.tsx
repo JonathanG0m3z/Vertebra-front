@@ -17,8 +17,12 @@ interface Shop {
   accounts: number;
   base: Base[];
 }
+interface Props {
+  idCompany: number | undefined;
+  idGroup: String | undefined;
+}
 
-const EcoTabShop: React.FC = ({idCompany, idGroup}) => {
+const EcoTabShop: React.FC = ({idCompany, idGroup}: Props) => {
   let shopData: Shop[] =[];
   if(idCompany!==undefined) shopData= data.data.filter((shop)=>shop.idCompany===idCompany);
   else if(idGroup!==undefined) shopData= data.data.filter((shop)=>shop.idGroup===idGroup);
@@ -26,7 +30,7 @@ const EcoTabShop: React.FC = ({idCompany, idGroup}) => {
   return (
     <>
     {!shopData.length?<NotFound mensaje={`No hay tiendas en ${idCompany!==undefined?'esta compañía':'este grupo'}`} />:null}
-      <div>
+      <div style={{overflowY: 'scroll', width: '270px', height: '90vh'}}>
         {shopData.map((shop, index) => {
           return (
             <div key={index} style={{ maxWidth: "250px" }}>
